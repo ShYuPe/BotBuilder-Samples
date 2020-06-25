@@ -12,7 +12,7 @@ import { TemplatesStatus, TemplatesEntity } from '../templatesStatus';
  * Diagnostics are a way to indicate issues with the code.
  * @see https://code.visualstudio.com/api/language-extensions/programmatic-language-features#provide-diagnostics
  */
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext):void {
     const collection: vscode.DiagnosticCollection = vscode.languages.createDiagnosticCollection('lg');
     if (vscode.window.activeTextEditor) {
         if (util.isLgFile(vscode.window.activeTextEditor.document.fileName))
